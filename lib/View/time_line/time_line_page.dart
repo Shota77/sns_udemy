@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:sns_udemy/View/time_line/post_page.dart';
 import 'package:sns_udemy/model/account.dart';
 import 'package:sns_udemy/model/post.dart';
 
@@ -82,6 +83,12 @@ class _TimeLinePageState extends State<TimeLinePage> {
                 ),
               );
           },
+        ),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => PostPage()));
+            },
+            child: Icon(Icons.chat_bubble_outline),
         ),
       );
   }
